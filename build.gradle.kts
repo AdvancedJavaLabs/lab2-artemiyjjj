@@ -1,5 +1,6 @@
 plugins {
     kotlin("jvm") version "1.9.20"
+    java
     application
 }
 
@@ -11,8 +12,8 @@ repositories {
 }
 
 dependencies {
-    implementation("javax.jms:jms-api:2.0.1")
-    implementation("org.apache.activemq:activemq-broker:6.1.1")
+    implementation("org.apache.kafka:kafka-clients:3.6.1")
+    implementation("com.google.code.gson:gson:2.10.1")
     testImplementation(kotlin("test"))
 }
 
@@ -21,9 +22,13 @@ tasks.test {
 }
 
 kotlin {
-    jvmToolchain(8)
+    jvmToolchain(14)
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("org.itmo.Main")
+    applicationDefaultJvmArgs = listOf(
+        "-Dfile.encoding=UTF-8",
+        "-Dconsole.encoding=UTF-8"
+    )
 }

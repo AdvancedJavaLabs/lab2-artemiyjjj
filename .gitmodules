@@ -1,0 +1,3 @@
+[submodule "text"]
+	path = text
+	url = git@gist.github.com:c95f3a864828f7f034b7a33d1676e420.git
