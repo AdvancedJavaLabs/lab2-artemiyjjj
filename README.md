@@ -1,4 +1,13 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/QODoQuhO)
 # Распределенная обработка текстовых данных с использованием брокера сообщений
+
+## Использование
+
+1. `git submodule update`
+
+1. `docker compose up`
+
+<!-- 1. `gradle run` -->
 
 ## Цель задания:
 Реализовать распределённую систему обработки текстовых данных, где секции текста рассылаются на обработку через брокер сообщений (message broker). Несколько воркеров параллельно обрабатывают секции и отправляют результаты на агрегатор. Воркеры выполняют набор задач
